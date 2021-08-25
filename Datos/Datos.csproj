@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2318406A-F7FC-4150-9B62-8E3CA6AFC335}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Datos</RootNamespace>
+    <AssemblyName>Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAOperacion.cs" />
+    <Compile Include="DATranspInter.cs" />
+    <Compile Include="DATipoTransporte.cs" />
+    <Compile Include="DAPlaca.cs" />
+    <Compile Include="DAArea.cs" />
+    <Compile Include="DAUndGestion.cs" />
+    <Compile Include="DACliente.cs" />
+    <Compile Include="DAMaquina.cs" />
+    <Compile Include="DACierreAlmacen.cs" />
+    <Compile Include="DAPeriodo.cs" />
+    <Compile Include="DABancos.cs" />
+    <Compile Include="DACuentaProveedor.cs" />
+    <Compile Include="DAProveedor.cs" />
+    <Compile Include="DAMoneda.cs" />
+    <Compile Include="DATipoCambio.cs" />
+    <Compile Include="DANumerador.cs" />
+    <Compile Include="DAUndNegocio.cs" />
+    <Compile Include="DATipoDoc.cs" />
+    <Compile Include="DAClaEmp.cs" />
+    <Compile Include="DAComun.cs" />
+    <Compile Include="DAMotivo.cs" />
+    <Compile Include="DAUbicFisica.cs" />
+    <Compile Include="DAMarca.cs" />
+    <Compile Include="DAEmpleado.cs" />
+    <Compile Include="DACondicion.cs" />
+    <Compile Include="DACentroCosto.cs" />
+    <Compile Include="DAMenu.cs" />
+    <Compile Include="DATipoOpe.cs" />
+    <Compile Include="DAClaArt.cs" />
+    <Compile Include="DAOpeLog.cs" />
+    <Compile Include="DAArticulo.cs" />
+    <Compile Include="DASubFamilia.cs" />
+    <Compile Include="DAFamilia.cs" />
+    <Compile Include="DAAlmacen.cs" />
+    <Compile Include="DASede.cs" />
+    <Compile Include="DAUnidad.cs" />
+    <Compile Include="DAUsuario.cs" />
+    <Compile Include="DAEmpresa.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Configuracion\Configuracion.csproj">
+      <Project>{D311ACFE-0BD0-4F14-9C36-F5B6644892E2}</Project>
+      <Name>Configuracion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidad\Entidad.csproj">
+      <Project>{04909F10-741E-465A-8A39-37492CC636AC}</Project>
+      <Name>Entidad</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

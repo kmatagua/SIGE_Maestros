@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C45728FD-FBDB-41F3-A5BC-7A59DD8D5295}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Negocio</RootNamespace>
+    <AssemblyName>Negocio</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NGOperacion.cs" />
+    <Compile Include="NGTranspInter.cs" />
+    <Compile Include="NGTipoTransporte.cs" />
+    <Compile Include="NGPlaca.cs" />
+    <Compile Include="NGArea.cs" />
+    <Compile Include="NGUndGestion.cs" />
+    <Compile Include="NGCliente.cs" />
+    <Compile Include="NGMaquina.cs" />
+    <Compile Include="NGCierreAlmacen.cs" />
+    <Compile Include="NGPeriodo.cs" />
+    <Compile Include="NGBancos.cs" />
+    <Compile Include="NGCuentaProveedor.cs" />
+    <Compile Include="NGProveedor.cs" />
+    <Compile Include="NGMoneda.cs" />
+    <Compile Include="NGTipoCambio.cs" />
+    <Compile Include="NGNumerador.cs" />
+    <Compile Include="NGUndNegocio.cs" />
+    <Compile Include="NGTipoDoc.cs" />
+    <Compile Include="NGClaEmp.cs" />
+    <Compile Include="NGComun.cs" />
+    <Compile Include="NGMotivo.cs" />
+    <Compile Include="NGUbicFisica.cs" />
+    <Compile Include="NGMarca.cs" />
+    <Compile Include="NGEmpleado.cs" />
+    <Compile Include="NGCondicion.cs" />
+    <Compile Include="NGCentroCosto.cs" />
+    <Compile Include="NGMenu.cs" />
+    <Compile Include="NGTipoOpe.cs" />
+    <Compile Include="NGClaArt.cs" />
+    <Compile Include="NGOpeLog.cs" />
+    <Compile Include="NGArticulo.cs" />
+    <Compile Include="NGSubFamilia.cs" />
+    <Compile Include="NGFamilia.cs" />
+    <Compile Include="NGAlmacen.cs" />
+    <Compile Include="NGSede.cs" />
+    <Compile Include="NGUnidad.cs" />
+    <Compile Include="NGUsuario.cs" />
+    <Compile Include="NGEmpresa.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Configuracion\Configuracion.csproj">
+      <Project>{D311ACFE-0BD0-4F14-9C36-F5B6644892E2}</Project>
+      <Name>Configuracion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{2318406A-F7FC-4150-9B62-8E3CA6AFC335}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidad\Entidad.csproj">
+      <Project>{04909F10-741E-465A-8A39-37492CC636AC}</Project>
+      <Name>Entidad</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

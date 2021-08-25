@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{04909F10-741E-465A-8A39-37492CC636AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Entidad</RootNamespace>
+    <AssemblyName>Entidad</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ENPlaca.cs" />
+    <Compile Include="ENUndGestion.cs" />
+    <Compile Include="ENDireccionProveedor.cs" />
+    <Compile Include="ENCliente.cs" />
+    <Compile Include="ENDetReceta.cs" />
+    <Compile Include="ENDireccionCliente.cs" />
+    <Compile Include="ENMaquina.cs" />
+    <Compile Include="ENConfig_Alm.cs" />
+    <Compile Include="ENCierreAlmacen.cs" />
+    <Compile Include="ENDetKit.cs" />
+    <Compile Include="ENPeriodo.cs" />
+    <Compile Include="ENBancos.cs" />
+    <Compile Include="ENCuentaProveedor.cs" />
+    <Compile Include="ENDireccionEmpresa.cs" />
+    <Compile Include="ENMoneda.cs" />
+    <Compile Include="ENNumerador.cs" />
+    <Compile Include="ENProveedor.cs" />
+    <Compile Include="ENSerieDefault.cs" />
+    <Compile Include="ENTipoCambio.cs" />
+    <Compile Include="ENArea.cs" />
+    <Compile Include="ENUndNegocio.cs" />
+    <Compile Include="ENTipoDoc.cs" />
+    <Compile Include="ENClaEmp.cs" />
+    <Compile Include="ENMotivo.cs" />
+    <Compile Include="ENUbicFisica.cs" />
+    <Compile Include="ENMarca.cs" />
+    <Compile Include="ENEmpleado.cs" />
+    <Compile Include="ENCondicion.cs" />
+    <Compile Include="ENCentroCosto.cs" />
+    <Compile Include="ENMenu.cs" />
+    <Compile Include="ENTipoOpe.cs" />
+    <Compile Include="ENClaArt.cs" />
+    <Compile Include="ENOpeLog.cs" />
+    <Compile Include="ENArticulo.cs" />
+    <Compile Include="ENSubFamilia.cs" />
+    <Compile Include="ENFamilia.cs" />
+    <Compile Include="ENAlmacen.cs" />
+    <Compile Include="ENSede.cs" />
+    <Compile Include="ENUsuEmp.cs" />
+    <Compile Include="ENUnidad.cs" />
+    <Compile Include="ENUsuario.cs" />
+    <Compile Include="ENEmpresa.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
