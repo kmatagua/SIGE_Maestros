@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NGSerie.cs" />
     <Compile Include="NGOperacion.cs" />
     <Compile Include="NGTranspInter.cs" />
     <Compile Include="NGTipoTransporte.cs" />

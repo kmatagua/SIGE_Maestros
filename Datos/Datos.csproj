@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DASerie.cs" />
     <Compile Include="DAOperacion.cs" />
     <Compile Include="DATranspInter.cs" />
     <Compile Include="DATipoTransporte.cs" />

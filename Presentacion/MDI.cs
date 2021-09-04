@@ -1519,7 +1519,25 @@ namespace Presentacion
             frm.Show();
         }
 
-        
-        
+        private void seriesPorOrdenToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<SeriesPorOrden_Listado>().Count() == 1)
+                Application.OpenForms.OfType<SeriesPorOrden_Listado>().First().Close();
+
+            SeriesPorOrden_Listado frm = new SeriesPorOrden_Listado();
+            frm.MdiParent = this;
+            frm.idUsuario = idUsuario;
+            frm.idEmpresa = intIdEmpresa;
+            frm.tsNuevo.Visible = true;// (tblBotones.Rows[0]["intNuevo"] is DBNull) ? false : Convert.ToBoolean(tblBotones.Rows[0]["intNuevo"]);
+            frm.tsEditar.Visible = true;//(tblBotones.Rows[0]["intEditar"] is DBNull) ? false : Convert.ToBoolean(tblBotones.Rows[0]["intEditar"]);
+            frm.tsVer.Visible = true;//(tblBotones.Rows[0]["intVer"] is DBNull) ? false : Convert.ToBoolean(tblBotones.Rows[0]["intVer"]);
+            frm.tsBuscar.Visible = true;//(tblBotones.Rows[0]["intBuscar"] is DBNull) ? false : Convert.ToBoolean(tblBotones.Rows[0]["intBuscar"]);
+            frm.tsActualizar.Visible = true;//(tblBotones.Rows[0]["intActualizar"] is DBNull) ? false : Convert.ToBoolean(tblBotones.Rows[0]["intActualizar"]);
+            frm.tsEliminar.Visible = true;//(tblBotones.Rows[0]["intEliminar"] is DBNull) ? false : Convert.ToBoolean(tblBotones.Rows[0]["intEliminar"]);
+            frm.tsImprimir.Visible = true;//(tblBotones.Rows[0]["intImp"] is DBNull) ? false : Convert.ToBoolean(tblBotones.Rows[0]["intImp"]);
+            frm.tsExportar.Visible = true;//(tblBotones.Rows[0]["intExportar"] is DBNull) ? false : Convert.ToBoolean(tblBotones.Rows[0]["intExportar"]);
+
+            frm.Show();
+        }
     }
 }

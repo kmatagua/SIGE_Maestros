@@ -330,6 +330,18 @@
       <DependentUpon>crArticulo.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="SeriesPorOrden_Listado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeriesPorOrden_Listado.Designer.cs">
+      <DependentUpon>SeriesPorOrden_Listado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeriesPorOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeriesPorOrden.Designer.cs">
+      <DependentUpon>SeriesPorOrden.cs</DependentUpon>
+    </Compile>
     <Compile Include="UniGesEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -378,9 +390,7 @@
       <DependentUpon>CR_LISTAPRECIO.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reportes\DS_Ped01.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Reportes\DS_Ped01.cs" />
     <Compile Include="Reportes\DS_Ped01.designer.cs">
       <DependentUpon>DS_Ped01.cs</DependentUpon>
     </Compile>
@@ -988,6 +998,9 @@
     <EmbeddedResource Include="Reportes\crArticulo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crArticulo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeriesPorOrden_Listado.resx">
+      <DependentUpon>SeriesPorOrden_Listado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UniGesEmpresa.resx">
       <DependentUpon>UniGesEmpresa.cs</DependentUpon>

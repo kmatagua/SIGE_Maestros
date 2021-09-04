@@ -129,6 +129,7 @@
             this.tssBaseDatos = new System.Windows.Forms.ToolStripStatusLabel();
             this.crearFamiliaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarSubFamiliasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.seriesPorOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.ssBar.SuspendLayout();
             this.SuspendLayout();
@@ -693,7 +694,8 @@
             this.crearNumeradorToolStripMenuItem,
             this.asignarNumeradorUsuarioToolStripMenuItem,
             this.numeradorPorDefectoToolStripMenuItem,
-            this.usuarioApruebaReqPorNumeadorToolStripMenuItem});
+            this.usuarioApruebaReqPorNumeadorToolStripMenuItem,
+            this.seriesPorOrdenToolStripMenuItem});
             this.numeradoresToolStripMenuItem.Name = "numeradoresToolStripMenuItem";
             this.numeradoresToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.numeradoresToolStripMenuItem.Tag = "1105";
@@ -1073,6 +1075,13 @@
             this.cargarSubFamiliasToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.cargarSubFamiliasToolStripMenuItem.Text = "Cargar Sub Familias";
             // 
+            // seriesPorOrdenToolStripMenuItem
+            // 
+            this.seriesPorOrdenToolStripMenuItem.Name = "seriesPorOrdenToolStripMenuItem";
+            this.seriesPorOrdenToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.seriesPorOrdenToolStripMenuItem.Text = "Series Por Orden";
+            this.seriesPorOrdenToolStripMenuItem.Click += new System.EventHandler(this.seriesPorOrdenToolStripMenuItem_Click_1);
+            // 
             // MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1201,5 +1210,6 @@
         private System.Windows.Forms.ToolStripMenuItem asignarCentroDeCostoAEmpresaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignarCentroDeCostoAUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuarioApruebaReqPorNumeadorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem seriesPorOrdenToolStripMenuItem;
     }
 }
