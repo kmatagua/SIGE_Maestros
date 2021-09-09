@@ -90,6 +90,7 @@
             this.asignarNumeradorUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.numeradorPorDefectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuarioApruebaReqPorNumeadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.seriesPorOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeCambioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -129,7 +130,6 @@
             this.tssBaseDatos = new System.Windows.Forms.ToolStripStatusLabel();
             this.crearFamiliaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarSubFamiliasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.seriesPorOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.ssBar.SuspendLayout();
             this.SuspendLayout();
@@ -730,6 +730,13 @@
             this.usuarioApruebaReqPorNumeadorToolStripMenuItem.Text = "Usuario Aprueba Req por Numeador";
             this.usuarioApruebaReqPorNumeadorToolStripMenuItem.Click += new System.EventHandler(this.usuarioApruebaReqPorNumeadorToolStripMenuItem_Click);
             // 
+            // seriesPorOrdenToolStripMenuItem
+            // 
+            this.seriesPorOrdenToolStripMenuItem.Name = "seriesPorOrdenToolStripMenuItem";
+            this.seriesPorOrdenToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.seriesPorOrdenToolStripMenuItem.Text = "Series Por Orden";
+            this.seriesPorOrdenToolStripMenuItem.Click += new System.EventHandler(this.seriesPorOrdenToolStripMenuItem_Click_1);
+            // 
             // tipoDeCambioToolStripMenuItem
             // 
             this.tipoDeCambioToolStripMenuItem.Name = "tipoDeCambioToolStripMenuItem";
@@ -1049,7 +1056,7 @@
             this.tssVersion.Image = ((System.Drawing.Image)(resources.GetObject("tssVersion.Image")));
             this.tssVersion.Name = "tssVersion";
             this.tssVersion.Size = new System.Drawing.Size(200, 17);
-            this.tssVersion.Text = "Vs. 20200826.1053";
+            this.tssVersion.Text = "Vs. 20210909.1053";
             // 
             // tssBaseDatos
             // 
@@ -1074,13 +1081,6 @@
             this.cargarSubFamiliasToolStripMenuItem.Name = "cargarSubFamiliasToolStripMenuItem";
             this.cargarSubFamiliasToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.cargarSubFamiliasToolStripMenuItem.Text = "Cargar Sub Familias";
-            // 
-            // seriesPorOrdenToolStripMenuItem
-            // 
-            this.seriesPorOrdenToolStripMenuItem.Name = "seriesPorOrdenToolStripMenuItem";
-            this.seriesPorOrdenToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
-            this.seriesPorOrdenToolStripMenuItem.Text = "Series Por Orden";
-            this.seriesPorOrdenToolStripMenuItem.Click += new System.EventHandler(this.seriesPorOrdenToolStripMenuItem_Click_1);
             // 
             // MDI
             // 

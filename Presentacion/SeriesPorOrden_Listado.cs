@@ -54,10 +54,10 @@ namespace Presentacion
                 MessageBox.Show("No hay registros para Editar.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            idSeleccion = Convert.ToInt32(dgvLista.CurrentRow.Cells["intIdSede"].Value);
+            idSeleccion = Convert.ToInt32(dgvLista.CurrentRow.Cells["intIdSeriesPorOrden"].Value);
 
-            Sede frm = new Sede();
-            frm.intIdSede = idSeleccion;
+            SeriesPorOrden frm = new SeriesPorOrden();
+            frm.intIdSeriesPorOrden = idSeleccion;
             frm.tipo = 2;
             frm.idUsuario = idUsuario;
             frm.ShowDialog();
@@ -72,9 +72,9 @@ namespace Presentacion
                 return;
             }
             int idSeleccion;
-            idSeleccion = Convert.ToInt32(dgvLista.CurrentRow.Cells["intIdSede"].Value);
-            Sede frm = new Sede();
-            frm.intIdSede = idSeleccion;
+            idSeleccion = Convert.ToInt32(dgvLista.CurrentRow.Cells["intIdSeriesPorOrden"].Value);
+            SeriesPorOrden frm = new SeriesPorOrden();
+            frm.intIdSeriesPorOrden = idSeleccion;
             frm.tipo = 3;
             frm.idUsuario = idUsuario;
             frm.ShowDialog();
@@ -87,11 +87,11 @@ namespace Presentacion
             bool blnTodoOK = false;
             int idSeleccion;
             Clases.InicialCls.LeerXml();
-            idSeleccion = Convert.ToInt32(dgvLista.CurrentRow.Cells["intIdSede"].Value);
+            idSeleccion = Convert.ToInt32(dgvLista.CurrentRow.Cells["intIdSeriesPorOrden"].Value);
 
-            NGSede obj = new NGSede(Configuracion.Sistema.CadenaConexion);
+            NGSerie obj = new NGSerie(Configuracion.Sistema.CadenaConexion);
 
-            string message = "Estas Seguro de Eliminar esta Sede?";
+            string message = "Estas Seguro de Eliminar esta Serie?";
             string caption = "Corfirmar Borrado";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result;
@@ -103,7 +103,7 @@ namespace Presentacion
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
 
-                obj.EliminarSede(idSeleccion, idUsuario, ref mensaje, ref blnTodoOK);
+                obj.EliminarSeriePorOrden(idSeleccion, idUsuario, ref mensaje, ref blnTodoOK);
 
                 if (!blnTodoOK)
                 {
@@ -117,7 +117,7 @@ namespace Presentacion
                 }
                 else
                 {
-                    MessageBox.Show("Sede Eliminada con éxito.!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Serie Eliminada con éxito.!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 Listar(idEmpresa);
             }
@@ -128,7 +128,7 @@ namespace Presentacion
         private void tsBuscar_Click(object sender, EventArgs e)
         {
             Busqueda frm = new Busqueda();
-            frm.nombre_maestro = "SEDE"; //VALOR PARA SEDE
+            frm.nombre_maestro = "SERIESPORORDEN"; //VALOR PARA SEDE
             frm.intId = idEmpresa;
 
             if (frm.ShowDialog() == DialogResult.OK)
@@ -152,7 +152,7 @@ namespace Presentacion
         private void tsImprimir_Click(object sender, EventArgs e)
         {
             Reportes.rptMantenimiento frmRpt = new Reportes.rptMantenimiento();
-            frmRpt.nombreRpt = "SEDE";
+            frmRpt.nombreRpt = "SERIESPORORDEN";
             frmRpt.idEmpresa = idEmpresa;
             frmRpt.Show();
         }

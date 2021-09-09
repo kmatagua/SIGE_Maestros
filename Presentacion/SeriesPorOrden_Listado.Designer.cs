@@ -57,6 +57,15 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.intIdSeriesPorOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.intIdNumerador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.intIdUsu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strCoUsu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.intIdUndProduccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strNoUndProduccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -289,6 +298,16 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvLista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.intIdSeriesPorOrden,
+            this.intIdNumerador,
+            this.strSerie,
+            this.strNumero,
+            this.intIdUsu,
+            this.strCoUsu,
+            this.name,
+            this.intIdUndProduccion,
+            this.strNoUndProduccion});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -338,6 +357,73 @@
             this.panel4.Size = new System.Drawing.Size(666, 10);
             this.panel4.TabIndex = 7;
             // 
+            // intIdSeriesPorOrden
+            // 
+            this.intIdSeriesPorOrden.DataPropertyName = "intIdSeriesPorOrden";
+            this.intIdSeriesPorOrden.HeaderText = "intIdSeriesPorOrden";
+            this.intIdSeriesPorOrden.Name = "intIdSeriesPorOrden";
+            this.intIdSeriesPorOrden.ReadOnly = true;
+            this.intIdSeriesPorOrden.Visible = false;
+            // 
+            // intIdNumerador
+            // 
+            this.intIdNumerador.DataPropertyName = "intIdNumerador";
+            this.intIdNumerador.HeaderText = "intIdNumerador";
+            this.intIdNumerador.Name = "intIdNumerador";
+            this.intIdNumerador.ReadOnly = true;
+            this.intIdNumerador.Visible = false;
+            // 
+            // strSerie
+            // 
+            this.strSerie.DataPropertyName = "strSerie";
+            this.strSerie.HeaderText = "Serie";
+            this.strSerie.Name = "strSerie";
+            this.strSerie.ReadOnly = true;
+            // 
+            // strNumero
+            // 
+            this.strNumero.DataPropertyName = "strNumero";
+            this.strNumero.HeaderText = "Numero";
+            this.strNumero.Name = "strNumero";
+            this.strNumero.ReadOnly = true;
+            // 
+            // intIdUsu
+            // 
+            this.intIdUsu.DataPropertyName = "intIdUsu";
+            this.intIdUsu.HeaderText = "intIdUsu";
+            this.intIdUsu.Name = "intIdUsu";
+            this.intIdUsu.ReadOnly = true;
+            this.intIdUsu.Visible = false;
+            // 
+            // strCoUsu
+            // 
+            this.strCoUsu.DataPropertyName = "strCoUsu";
+            this.strCoUsu.HeaderText = "Codigo";
+            this.strCoUsu.Name = "strCoUsu";
+            this.strCoUsu.ReadOnly = true;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Usuario";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // intIdUndProduccion
+            // 
+            this.intIdUndProduccion.DataPropertyName = "intIdUndProduccion";
+            this.intIdUndProduccion.HeaderText = "intIdUndProduccion";
+            this.intIdUndProduccion.Name = "intIdUndProduccion";
+            this.intIdUndProduccion.ReadOnly = true;
+            this.intIdUndProduccion.Visible = false;
+            // 
+            // strNoUndProduccion
+            // 
+            this.strNoUndProduccion.DataPropertyName = "strNoUndProduccion";
+            this.strNoUndProduccion.HeaderText = "Unidad de Produccion";
+            this.strNoUndProduccion.Name = "strNoUndProduccion";
+            this.strNoUndProduccion.ReadOnly = true;
+            // 
             // SeriesPorOrden_Listado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,7 +439,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "SeriesPorOrden_Listado";
             this.Tag = "1050";
-            this.Text = "Sede";
+            this.Text = "Series por Orden";
             this.Load += new System.EventHandler(this.SeriesPorOrden_Listado_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -393,5 +479,14 @@
         public System.Windows.Forms.ToolStripButton tsActualizar;
         public System.Windows.Forms.ToolStripButton tsImprimir;
         public System.Windows.Forms.ToolStripButton tsExportar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn intIdSeriesPorOrden;
+        private System.Windows.Forms.DataGridViewTextBoxColumn intIdNumerador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn strSerie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn strNumero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn intIdUsu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn strCoUsu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn intIdUndProduccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn strNoUndProduccion;
     }
 }

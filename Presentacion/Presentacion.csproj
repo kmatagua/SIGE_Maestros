@@ -999,6 +999,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crArticulo.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="SeriesPorOrden.resx">
+      <DependentUpon>SeriesPorOrden.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SeriesPorOrden_Listado.resx">
       <DependentUpon>SeriesPorOrden_Listado.cs</DependentUpon>
     </EmbeddedResource>

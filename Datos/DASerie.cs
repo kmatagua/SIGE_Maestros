@@ -39,6 +39,29 @@ namespace Datos
             return tbl;
         }
 
+        public void EliminarSeriePorOrden(int idSeleccion, int idUsuario, ref string mensaje, ref bool pBlnTodoOk)
+        {
+            SqlConnection cn = new SqlConnection(_pStrConString);
+            pBlnTodoOk = false;
+
+            try
+            {
+                cn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("SP_SERIE_POR_ORDEN_UD01", cn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@intIdSede", idSeleccion);
+                da.SelectCommand.Parameters.AddWithValue("@intIdUsuMf", idUsuario);
+                da.SelectCommand.Parameters.Add("@strMensaje", SqlDbType.NVarChar, 100).Direction = ParameterDirection.Output;
+                da.SelectCommand.ExecuteNonQuery();
+                mensaje = da.SelectCommand.Parameters["@strMensaje"].Value.ToString();
+                pBlnTodoOk = true;
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                pBlnTodoOk = false;
+            }
+        }
 
     }
 }

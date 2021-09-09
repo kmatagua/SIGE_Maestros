@@ -24,6 +24,12 @@ namespace Negocio
             return tbl;
         }
 
-        
+        public void EliminarSeriePorOrden(int idSeleccion, int idUsuario, ref string mensaje, ref bool blnTodoOK)
+        {
+            Datos.DASerie obj = new Datos.DASerie(_strConString);
+            obj.EliminarSeriePorOrden(idSeleccion, idUsuario, ref mensaje, ref blnTodoOK);
+
+        }
+
     }
 }
