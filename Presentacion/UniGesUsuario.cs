@@ -101,8 +101,6 @@ namespace Presentacion
                     tabla.Rows.Add(row);
                 }
 
-
-
                 dgvListaUniGesAcc.DataSource = tabla;
             }
         }
@@ -120,7 +118,6 @@ namespace Presentacion
             cbxUsuario.ValueMember = "id";
             //src.DataSource = tblUsuario;
             //dgvLista.DataSource = src;
-
 
         }
 
@@ -141,7 +138,6 @@ namespace Presentacion
                     return;
                 }
             }
-
 
             tabla.Rows.Add(new object[] { 0, strNoUniGes, intIdUniGes});
 
@@ -285,8 +281,5 @@ namespace Presentacion
             dgvListaUniGesAcc.DataSource = tabla;
         }
 
-
-        
-        
     }
 }
