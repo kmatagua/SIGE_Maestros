@@ -294,6 +294,12 @@
     <Compile Include="CenCosUsuario.Designer.cs">
       <DependentUpon>CenCosUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="SeriesPorOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeriesPorOrden.Designer.cs">
+      <DependentUpon>SeriesPorOrden.cs</DependentUpon>
+    </Compile>
     <Compile Include="Placa_Listado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,18 +335,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>crArticulo.rpt</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="SeriesPorOrden_Listado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SeriesPorOrden_Listado.Designer.cs">
-      <DependentUpon>SeriesPorOrden_Listado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SeriesPorOrden.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SeriesPorOrden.Designer.cs">
-      <DependentUpon>SeriesPorOrden.cs</DependentUpon>
     </Compile>
     <Compile Include="UniGesEmpresa.cs">
       <SubType>Form</SubType>
@@ -980,6 +974,9 @@
     <EmbeddedResource Include="CenCosUsuario.resx">
       <DependentUpon>CenCosUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SeriesPorOrden.resx">
+      <DependentUpon>SeriesPorOrden.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Placa_Listado.resx">
       <DependentUpon>Placa_Listado.cs</DependentUpon>
     </EmbeddedResource>
@@ -998,12 +995,6 @@
     <EmbeddedResource Include="Reportes\crArticulo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crArticulo.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SeriesPorOrden.resx">
-      <DependentUpon>SeriesPorOrden.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SeriesPorOrden_Listado.resx">
-      <DependentUpon>SeriesPorOrden_Listado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UniGesEmpresa.resx">
       <DependentUpon>UniGesEmpresa.cs</DependentUpon>

@@ -144,6 +144,13 @@ namespace Negocio
 
         }
 
+        public void InsertarNumeradorUsuarioOrdenes(int idUsuario, DataTable tabla, int idEmpresa, ref bool blnTodoOK)
+        {
+            Datos.DAUsuario obj = new Datos.DAUsuario(_strConString);
+            obj.InsertarNumeradorUsuarioOrdenes(idUsuario, tabla, idEmpresa, ref blnTodoOK);
+
+        }
+
         public void BorrarUniNeg(int idSeleccion, ref bool blnTodoOK)
         {
             Datos.DAUsuario obj = new Datos.DAUsuario(_strConString);
@@ -155,6 +162,13 @@ namespace Negocio
         {
             Datos.DAUsuario obj = new Datos.DAUsuario(_strConString);
             obj.BorrarNumerador(idSeleccion, idUsuario, idEmpresa, ref blnTodoOK);
+
+        }
+
+        public void BorrarNumeradorOrdenes(int idSeleccion, int idUsuario, int idEmpresa, ref bool blnTodoOK)
+        {
+            Datos.DAUsuario obj = new Datos.DAUsuario(_strConString);
+            obj.BorrarNumeradorOrdenes(idSeleccion, idUsuario, idEmpresa, ref blnTodoOK);
 
         }
 

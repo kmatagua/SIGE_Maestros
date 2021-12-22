@@ -39,6 +39,28 @@ namespace Datos
             return tbl;
         }
 
+        public DataTable ListaNumeradorOrdenes(int idEmpresa, ref bool pBlnTodoOk)
+        {
+            SqlConnection cn = new SqlConnection(_pStrConString);
+            pBlnTodoOk = false;
+            DataTable tbl = new DataTable();
+            try
+            {
+                cn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("SP_NUMERADOR_ORDENES_Q01", cn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@intIdEmp", idEmpresa);
+                da.Fill(tbl);
+                pBlnTodoOk = true;
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                pBlnTodoOk = false;
+            }
+            return tbl;
+        }
+
         public DataTable ListaNumeradorRequerimiento(int idEmpresa, ref bool pBlnTodoOk)
         {
             SqlConnection cn = new SqlConnection(_pStrConString);
@@ -70,6 +92,29 @@ namespace Datos
             {
                 cn.Open();
                 SqlDataAdapter da = new SqlDataAdapter("SP_NUMERADOR_USU_Q01", cn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@intIdUsu", idUsuario);
+                da.SelectCommand.Parameters.AddWithValue("@intIdEmp", idEmpresa);
+                da.Fill(tbl);
+                pBlnTodoOk = true;
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                pBlnTodoOk = false;
+            }
+            return tbl;
+        }
+
+        public DataTable ListaNumeradorAccSeriesOrdenes(int idUsuario, int idEmpresa, ref bool pBlnTodoOk)
+        {
+            SqlConnection cn = new SqlConnection(_pStrConString);
+            pBlnTodoOk = false;
+            DataTable tbl = new DataTable();
+            try
+            {
+                cn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("SP_NUMERADOR_USU_ORDENES_Q01", cn);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
                 da.SelectCommand.Parameters.AddWithValue("@intIdUsu", idUsuario);
                 da.SelectCommand.Parameters.AddWithValue("@intIdEmp", idEmpresa);

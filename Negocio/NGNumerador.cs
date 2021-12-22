@@ -24,6 +24,14 @@ namespace Negocio
             return tbl;
         }
 
+        public DataTable NumeradorOrdenes(int idEmpresa, ref bool blnTodoOK)
+        {
+            DataTable tbl = new DataTable();
+            Datos.DANumerador obj = new Datos.DANumerador(_strConString);
+            tbl = obj.ListaNumeradorOrdenes(idEmpresa, ref blnTodoOK);
+            return tbl;
+        }
+
         public DataTable NumeradorRequerimiento(int idEmpresa, ref bool blnTodoOK)
         {
             DataTable tbl = new DataTable();
@@ -37,6 +45,14 @@ namespace Negocio
             DataTable tbl = new DataTable();
             Datos.DANumerador obj = new Datos.DANumerador(_strConString);
             tbl = obj.ListaNumeradorAccUsu(idUsuario, idEmpresa, ref blnTodoOK);
+            return tbl;
+        }
+
+        public DataTable NumeradorAccesoUsuSeriesOrdenes(int idUsuario, int idEmpresa, ref bool blnTodoOK)
+        {
+            DataTable tbl = new DataTable();
+            Datos.DANumerador obj = new Datos.DANumerador(_strConString);
+            tbl = obj.ListaNumeradorAccSeriesOrdenes(idUsuario, idEmpresa, ref blnTodoOK);
             return tbl;
         }
 
