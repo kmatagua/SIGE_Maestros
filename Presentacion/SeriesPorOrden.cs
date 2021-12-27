@@ -57,7 +57,7 @@ namespace Presentacion
             ListarComboUsuario(idEmpresa);
             ListarComboOperacion();
             //ListarComboTipoOpe2();
-
+            ListarComboUndProduccion();
             ListarNumerador(idEmpresa);
             Clases.Reglas.alternarColor(dgvListaNumerador);
             Clases.Reglas.alternarColor(dgvListaNumeradorAcc);
@@ -405,6 +405,22 @@ namespace Presentacion
         //    filtrarNumeradorAcc();
         //}
 
+        public void ListarComboUndProduccion()
+        {
+            bool blnTodoOK = false;
+            Clases.InicialCls.LeerXml();
+
+            NGComun obj = new NGComun(Configuracion.Sistema.CadenaConexion);
+            tblUsuario = obj.ComboUnidadProduccion(ref blnTodoOK);
+
+            cbxUP.DataSource = tblUsuario;
+            cbxUP.DisplayMember = "nombre";
+            cbxUP.ValueMember = "id";
+            //src.DataSource = tblUsuario;
+            //dgvLista.DataSource = src;
+
+
+        }
 
 
     }

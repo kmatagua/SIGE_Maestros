@@ -169,5 +169,22 @@ namespace Negocio
             obj.InsertarNumeroAprobacion(idUsuario, tabla, idEmpresa, ref blnTodoOK);
 
         }
+
+        public DataTable ComboUnidadProduccion(ref bool pBlnTodoOk)
+        {
+            Datos.DAComun objDatos = new Datos.DAComun(_strConString);
+            System.Data.DataTable objRetVal = new System.Data.DataTable();
+            pBlnTodoOk = false;
+            try
+            {
+                objRetVal = objDatos.ComboUnidadProduccion(ref pBlnTodoOk);
+            }
+            catch (Exception ex)
+            {
+                pBlnTodoOk = false;
+                Configuracion.Libreria.Error_Grabar(ex);
+            }
+            return objRetVal;
+        }
     }
 }

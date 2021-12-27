@@ -29,14 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeriesPorOrden));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtIdAlm = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.dgvListaNumerador = new System.Windows.Forms.DataGridView();
+            this.id_Numerador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serie_Numerador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numero_Numerador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observacion_Numerador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvListaNumeradorAcc = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,10 +60,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.id_Numerador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serie_Numerador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numero_Numerador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observacion_Numerador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbxUP = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaNumerador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaNumeradorAcc)).BeginInit();
             this.panel1.SuspendLayout();
@@ -108,28 +110,28 @@
             this.dgvListaNumerador.AllowUserToResizeRows = false;
             this.dgvListaNumerador.BackgroundColor = System.Drawing.Color.White;
             this.dgvListaNumerador.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListaNumerador.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListaNumerador.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvListaNumerador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaNumerador.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_Numerador,
             this.serie_Numerador,
             this.numero_Numerador,
             this.observacion_Numerador});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListaNumerador.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListaNumerador.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvListaNumerador.Location = new System.Drawing.Point(10, 63);
             this.dgvListaNumerador.Name = "dgvListaNumerador";
             this.dgvListaNumerador.ReadOnly = true;
@@ -138,6 +140,43 @@
             this.dgvListaNumerador.Size = new System.Drawing.Size(570, 188);
             this.dgvListaNumerador.TabIndex = 2;
             // 
+            // id_Numerador
+            // 
+            this.id_Numerador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.id_Numerador.DataPropertyName = "id_Numerador";
+            this.id_Numerador.HeaderText = "Id";
+            this.id_Numerador.Name = "id_Numerador";
+            this.id_Numerador.ReadOnly = true;
+            this.id_Numerador.Visible = false;
+            // 
+            // serie_Numerador
+            // 
+            this.serie_Numerador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.serie_Numerador.DataPropertyName = "serie_Numerador";
+            this.serie_Numerador.HeaderText = "Serie";
+            this.serie_Numerador.Name = "serie_Numerador";
+            this.serie_Numerador.ReadOnly = true;
+            this.serie_Numerador.Width = 56;
+            // 
+            // numero_Numerador
+            // 
+            this.numero_Numerador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.numero_Numerador.DataPropertyName = "numero_Numerador";
+            this.numero_Numerador.HeaderText = "Número";
+            this.numero_Numerador.MaxInputLength = 100;
+            this.numero_Numerador.Name = "numero_Numerador";
+            this.numero_Numerador.ReadOnly = true;
+            this.numero_Numerador.Width = 69;
+            // 
+            // observacion_Numerador
+            // 
+            this.observacion_Numerador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.observacion_Numerador.DataPropertyName = "observacion_Numerador";
+            this.observacion_Numerador.HeaderText = "Descripcion";
+            this.observacion_Numerador.Name = "observacion_Numerador";
+            this.observacion_Numerador.ReadOnly = true;
+            this.observacion_Numerador.Width = 88;
+            // 
             // dgvListaNumeradorAcc
             // 
             this.dgvListaNumeradorAcc.AllowUserToAddRows = false;
@@ -145,35 +184,35 @@
             this.dgvListaNumeradorAcc.AllowUserToResizeRows = false;
             this.dgvListaNumeradorAcc.BackgroundColor = System.Drawing.Color.White;
             this.dgvListaNumeradorAcc.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListaNumeradorAcc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListaNumeradorAcc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvListaNumeradorAcc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaNumeradorAcc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.serie,
             this.numero,
             this.observacion});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListaNumeradorAcc.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListaNumeradorAcc.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvListaNumeradorAcc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvListaNumeradorAcc.Location = new System.Drawing.Point(10, 294);
+            this.dgvListaNumeradorAcc.Location = new System.Drawing.Point(10, 314);
             this.dgvListaNumeradorAcc.Name = "dgvListaNumeradorAcc";
             this.dgvListaNumeradorAcc.ReadOnly = true;
             this.dgvListaNumeradorAcc.RowHeadersWidth = 20;
             this.dgvListaNumeradorAcc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvListaNumeradorAcc.Size = new System.Drawing.Size(570, 234);
+            this.dgvListaNumeradorAcc.Size = new System.Drawing.Size(570, 214);
             this.dgvListaNumeradorAcc.TabIndex = 4;
             this.dgvListaNumeradorAcc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaNumeradorAcc_CellContentClick);
             // 
@@ -224,7 +263,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 25);
+            this.label4.Location = new System.Drawing.Point(7, 45);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(133, 13);
             this.label4.TabIndex = 106;
@@ -317,21 +356,23 @@
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 294);
+            this.panel2.Location = new System.Drawing.Point(0, 314);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 234);
+            this.panel2.Size = new System.Drawing.Size(10, 214);
             this.panel2.TabIndex = 115;
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(580, 294);
+            this.panel3.Location = new System.Drawing.Point(580, 314);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 234);
+            this.panel3.Size = new System.Drawing.Size(10, 214);
             this.panel3.TabIndex = 116;
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.cbxUP);
+            this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.btnPasaTodo);
             this.panel4.Controls.Add(this.btnPasa);
@@ -339,7 +380,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 253);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(590, 41);
+            this.panel4.Size = new System.Drawing.Size(590, 61);
             this.panel4.TabIndex = 117;
             // 
             // panel5
@@ -352,43 +393,23 @@
             this.panel5.Size = new System.Drawing.Size(590, 37);
             this.panel5.TabIndex = 118;
             // 
-            // id_Numerador
+            // cbxUP
             // 
-            this.id_Numerador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.id_Numerador.DataPropertyName = "id_Numerador";
-            this.id_Numerador.HeaderText = "Id";
-            this.id_Numerador.Name = "id_Numerador";
-            this.id_Numerador.ReadOnly = true;
-            this.id_Numerador.Visible = false;
-            this.id_Numerador.Width = 22;
+            this.cbxUP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxUP.FormattingEnabled = true;
+            this.cbxUP.Location = new System.Drawing.Point(10, 19);
+            this.cbxUP.Name = "cbxUP";
+            this.cbxUP.Size = new System.Drawing.Size(268, 21);
+            this.cbxUP.TabIndex = 114;
             // 
-            // serie_Numerador
+            // label5
             // 
-            this.serie_Numerador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.serie_Numerador.DataPropertyName = "serie_Numerador";
-            this.serie_Numerador.HeaderText = "Serie";
-            this.serie_Numerador.Name = "serie_Numerador";
-            this.serie_Numerador.ReadOnly = true;
-            this.serie_Numerador.Width = 56;
-            // 
-            // numero_Numerador
-            // 
-            this.numero_Numerador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.numero_Numerador.DataPropertyName = "numero_Numerador";
-            this.numero_Numerador.HeaderText = "Número";
-            this.numero_Numerador.MaxInputLength = 100;
-            this.numero_Numerador.Name = "numero_Numerador";
-            this.numero_Numerador.ReadOnly = true;
-            this.numero_Numerador.Width = 69;
-            // 
-            // observacion_Numerador
-            // 
-            this.observacion_Numerador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.observacion_Numerador.DataPropertyName = "observacion_Numerador";
-            this.observacion_Numerador.HeaderText = "Descripcion";
-            this.observacion_Numerador.Name = "observacion_Numerador";
-            this.observacion_Numerador.ReadOnly = true;
-            this.observacion_Numerador.Width = 88;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 13);
+            this.label5.TabIndex = 106;
+            this.label5.Text = "Unidad de Produccion.";
             // 
             // SeriesPorOrden
             // 
@@ -449,5 +470,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn serie_Numerador;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero_Numerador;
         private System.Windows.Forms.DataGridViewTextBoxColumn observacion_Numerador;
+        private System.Windows.Forms.ComboBox cbxUP;
+        private System.Windows.Forms.Label label5;
     }
 }

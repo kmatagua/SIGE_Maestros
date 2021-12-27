@@ -319,6 +319,28 @@ namespace Datos
                  pBlnTodoOk = false;
              }
          }
-    
+
+        public DataTable ComboUnidadProduccion(ref bool pBlnTodoOk)
+        {
+            SqlConnection cn = new SqlConnection(_pStrConString);
+            SqlCommand cmd = new SqlCommand();
+            DataTable tbl = new DataTable();
+            try
+            {
+                cn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("SP_COMBO_UNIDAD_PRODUCCION_Q01", cn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.Fill(tbl);
+                pBlnTodoOk = true;
+            }
+            catch (Exception ex)
+            {
+                Libreria.Error_Grabar(ex);
+                pBlnTodoOk = false;
+            }
+            cn.Close();
+            return tbl;
+        }
+
     }
 }
