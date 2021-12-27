@@ -230,6 +230,7 @@ namespace Presentacion
 
                     NGUsuario objNgAlm = new NGUsuario(Configuracion.Sistema.CadenaConexion);
                     int idUsuario = (cbxUsuario.SelectedValue is DBNull) ? 0 : Convert.ToInt32(cbxUsuario.SelectedValue.ToString());
+                    //int idUsuario = (cbxUsuario.SelectedValue is DBNull) ? 0 : Convert.ToInt32(cbxUsuario.SelectedValue.ToString());
                     objNgAlm.InsertarNumeradorUsuarioOrdenes(idUsuario, tabla, idEmpresa, ref blnTodoOK);
 
                     if (blnTodoOK)
@@ -280,14 +281,8 @@ namespace Presentacion
                     string strSerieNumerador = row.Cells["serie_Numerador"].Value.ToString();
                     string strNroNumerador = row.Cells["numero_Numerador"].Value.ToString();
                     string strObservacionNumerador = row.Cells["observacion_Numerador"].Value.ToString();
-                    string strAlmacenNumerador = row.Cells["almacen_Numerador"].Value.ToString();
-                    string strTipoOpeNumerador = row.Cells["tipoOpe_Numerador"].Value.ToString();
-                    int intAprOrden = 0;
-                    int intGenOrden = 0;
-                    int intValSerieOrden = 0;
-                    int intValEditOrden = 0;
-                    int intValAnulOrden = 0;
-                    tabla.Rows.Add(new object[] { intIdNumerador, strSerieNumerador, strNroNumerador, strObservacionNumerador, strAlmacenNumerador, strTipoOpeNumerador, intAprOrden, intGenOrden, intValSerieOrden, intValEditOrden, intValAnulOrden });
+                  
+                    tabla.Rows.Add(new object[] { intIdNumerador, strSerieNumerador, strNroNumerador, strObservacionNumerador });
                 }
                 return;
             }
@@ -300,14 +295,9 @@ namespace Presentacion
                     string strSerieNumerador = row.Cells["serie_Numerador"].Value.ToString();
                     string strNroNumerador = row.Cells["numero_Numerador"].Value.ToString();
                     string strObservacionNumerador = row.Cells["observacion_Numerador"].Value.ToString();
-                    string strAlmacenNumerador = row.Cells["almacen_Numerador"].Value.ToString();
-                    string strTipoOpeNumerador = row.Cells["tipoOpe_Numerador"].Value.ToString();
+                    
                     string ss = row.Cells["id_Numerador"].Value.ToString();
-                    int intAprOrden = 0;
-                    int intGenOrden = 0;
-                    int intValSerieOrden = 0;
-                    int intValEditOrden = 0;
-                    int intValAnulOrden = 0;
+                   
                     DataRow foundRow1 = tabla.Rows.Find(ss);
 
                     if (foundRow1 != null)
@@ -316,7 +306,7 @@ namespace Presentacion
                     }
                     else
                     {
-                        tabla.Rows.Add(new object[] { intIdNumerador, strSerieNumerador, strNroNumerador, strObservacionNumerador, strAlmacenNumerador, strTipoOpeNumerador, intAprOrden, intGenOrden, intValSerieOrden, intValEditOrden, intValAnulOrden });
+                        tabla.Rows.Add(new object[] { intIdNumerador, strSerieNumerador, strNroNumerador, strObservacionNumerador });
                     }
 
                 }
