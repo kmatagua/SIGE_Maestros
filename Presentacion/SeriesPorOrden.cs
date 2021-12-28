@@ -35,7 +35,9 @@ namespace Presentacion
             tabla.Columns.Add("serie");
             tabla.Columns.Add("numero");
             tabla.Columns.Add("observacion");
-           
+            tabla.Columns.Add("idUnidadProduccion");
+            tabla.Columns.Add("UnidadProduccion");
+
             DataColumn[] colPk1 = new DataColumn[1];
             colPk1[0] = tabla.Columns["id"];
             tabla.PrimaryKey = colPk1;
@@ -146,15 +148,22 @@ namespace Presentacion
             string strSerieNumerador = dgvListaNumerador.CurrentRow.Cells["serie_Numerador"].Value.ToString();
             string strNroNumerador = dgvListaNumerador.CurrentRow.Cells["numero_Numerador"].Value.ToString();
             string strObservacionNumerador = dgvListaNumerador.CurrentRow.Cells["observacion_Numerador"].Value.ToString();
+            int idUndProduccion = Convert.ToInt32(cbxUP.SelectedValue);
+            string strUnidadProduccion = cbxUP.Text;
 
             if (Convert.ToInt32(cbxUsuario.SelectedValue) <= 0)
             {
                 MessageBox.Show("Selecione Usuario", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (Convert.ToInt32(cbxUP.SelectedValue) <= 0)
+            {
+                MessageBox.Show("Selecione Unidad de Producción", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             foreach (DataRow row2 in tabla.Rows)
             {
-                if (intIdNumerador == Convert.ToInt32(row2[0].ToString()))
+                if (intIdNumerador == Convert.ToInt32(row2[0].ToString()) /*&& idUndProduccion == Convert.ToInt32(row2[4].ToString())*/)
                 {
                     MessageBox.Show("El numerador ya fue Asignado", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -162,7 +171,7 @@ namespace Presentacion
             }
 
 
-            tabla.Rows.Add(new object[] { intIdNumerador, strSerieNumerador, strNroNumerador, strObservacionNumerador });
+            tabla.Rows.Add(new object[] { intIdNumerador, strSerieNumerador, strNroNumerador, strObservacionNumerador, idUndProduccion, strUnidadProduccion });
 
             //int index = dgvListaEmp.CurrentRow.Index;
             //dgvListaEmp.Rows.RemoveAt(index);
