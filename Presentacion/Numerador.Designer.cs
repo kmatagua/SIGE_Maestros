@@ -194,7 +194,7 @@
             // 
             this.txtSerie.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSerie.Location = new System.Drawing.Point(13, 226);
-            this.txtSerie.MaxLength = 4;
+            this.txtSerie.MaxLength = 6;
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(85, 20);
             this.txtSerie.TabIndex = 7;
