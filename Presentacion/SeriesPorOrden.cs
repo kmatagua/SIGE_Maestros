@@ -35,8 +35,8 @@ namespace Presentacion
             tabla.Columns.Add("serie");
             tabla.Columns.Add("numero");
             tabla.Columns.Add("observacion");
-            tabla.Columns.Add("idUnidadProduccion");
-            tabla.Columns.Add("UnidadProduccion");
+            tabla.Columns.Add("intIdUndProduccion");
+            tabla.Columns.Add("strNoUndProduccion");
 
             DataColumn[] colPk1 = new DataColumn[1];
             colPk1[0] = tabla.Columns["id"];
@@ -117,7 +117,8 @@ namespace Presentacion
                     row["serie"] = row1["strSerie"].ToString();
                     row["numero"] = row1["strNumero"].ToString();
                     row["observacion"] = row1["strObservacion"].ToString();
-                    
+                    row["intIdUndProduccion"] = row1["intIdUndProduccion"].ToString();
+                    row["strNoUndProduccion"] = row1["strNoUndProduccion"].ToString();
                     tabla.Rows.Add(row);
                 }
                 src2.DataSource = tabla;
