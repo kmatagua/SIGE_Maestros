@@ -546,7 +546,7 @@ namespace Datos
                         da1.SelectCommand.Parameters.Clear();
                         //    id
 
-                        da1.SelectCommand.Parameters.AddWithValue("@intIdNum", Convert.ToInt32(row["id"].ToString()));
+                        da1.SelectCommand.Parameters.AddWithValue("@intIdNum", Convert.ToInt32(row["id_numerador"].ToString()));
                         da1.SelectCommand.Parameters.AddWithValue("@intIdUsu", idUsuario);
                         da1.SelectCommand.Parameters.AddWithValue("@intIdEmp", idEmpresa);
                         da1.SelectCommand.Parameters.AddWithValue("@intIdUnidadProduccion", Convert.ToInt32(row["intIdUndProduccion"].ToString()));

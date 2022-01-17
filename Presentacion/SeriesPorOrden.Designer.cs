@@ -37,15 +37,12 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.dgvListaNumerador = new System.Windows.Forms.DataGridView();
-            this.id_Numerador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serie_Numerador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numero_Numerador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observacion_Numerador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvListaNumeradorAcc = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnPasa = new System.Windows.Forms.Button();
@@ -54,7 +51,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmpresa = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnPasaTodo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -62,6 +58,14 @@
             this.cbxUP = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_numerador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idNew = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.intIdUndProduccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strNoUndProduccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaNumerador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaNumeradorAcc)).BeginInit();
             this.panel1.SuspendLayout();
@@ -120,7 +124,8 @@
             this.dgvListaNumerador.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvListaNumerador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaNumerador.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_Numerador,
+            this.id_serie,
+            this.id_num,
             this.serie_Numerador,
             this.numero_Numerador,
             this.observacion_Numerador});
@@ -140,14 +145,21 @@
             this.dgvListaNumerador.Size = new System.Drawing.Size(570, 188);
             this.dgvListaNumerador.TabIndex = 2;
             // 
-            // id_Numerador
+            // id_serie
             // 
-            this.id_Numerador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.id_Numerador.DataPropertyName = "id_Numerador";
-            this.id_Numerador.HeaderText = "Id";
-            this.id_Numerador.Name = "id_Numerador";
-            this.id_Numerador.ReadOnly = true;
-            this.id_Numerador.Visible = false;
+            this.id_serie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.id_serie.DataPropertyName = "id";
+            this.id_serie.HeaderText = "Id";
+            this.id_serie.Name = "id_serie";
+            this.id_serie.ReadOnly = true;
+            this.id_serie.Visible = false;
+            // 
+            // id_num
+            // 
+            this.id_num.DataPropertyName = "id_Numerador";
+            this.id_num.HeaderText = "id_Numerador";
+            this.id_num.Name = "id_num";
+            this.id_num.ReadOnly = true;
             // 
             // serie_Numerador
             // 
@@ -195,9 +207,13 @@
             this.dgvListaNumeradorAcc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaNumeradorAcc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
+            this.id_numerador,
+            this.idNew,
+            this.intIdUndProduccion,
             this.serie,
             this.numero,
-            this.observacion});
+            this.observacion,
+            this.strNoUndProduccion});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -215,41 +231,6 @@
             this.dgvListaNumeradorAcc.Size = new System.Drawing.Size(570, 214);
             this.dgvListaNumeradorAcc.TabIndex = 4;
             this.dgvListaNumeradorAcc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaNumeradorAcc_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // serie
-            // 
-            this.serie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.serie.DataPropertyName = "serie";
-            this.serie.HeaderText = "Serie";
-            this.serie.Name = "serie";
-            this.serie.ReadOnly = true;
-            this.serie.Width = 56;
-            // 
-            // numero
-            // 
-            this.numero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.numero.DataPropertyName = "numero";
-            this.numero.HeaderText = "Numero";
-            this.numero.Name = "numero";
-            this.numero.ReadOnly = true;
-            this.numero.Width = 69;
-            // 
-            // observacion
-            // 
-            this.observacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.observacion.DataPropertyName = "observacion";
-            this.observacion.HeaderText = "Descripcion";
-            this.observacion.Name = "observacion";
-            this.observacion.ReadOnly = true;
-            this.observacion.Width = 88;
             // 
             // label3
             // 
@@ -271,7 +252,7 @@
             // 
             // btnPasa
             // 
-            this.btnPasa.Location = new System.Drawing.Point(398, 13);
+            this.btnPasa.Location = new System.Drawing.Point(472, 13);
             this.btnPasa.Name = "btnPasa";
             this.btnPasa.Size = new System.Drawing.Size(50, 30);
             this.btnPasa.TabIndex = 3;
@@ -281,7 +262,7 @@
             // 
             // btnSaca
             // 
-            this.btnSaca.Location = new System.Drawing.Point(454, 13);
+            this.btnSaca.Location = new System.Drawing.Point(528, 13);
             this.btnSaca.Name = "btnSaca";
             this.btnSaca.Size = new System.Drawing.Size(50, 30);
             this.btnSaca.TabIndex = 5;
@@ -329,16 +310,6 @@
             this.label2.TabIndex = 106;
             this.label2.Text = "Empresa:";
             // 
-            // btnPasaTodo
-            // 
-            this.btnPasaTodo.Location = new System.Drawing.Point(510, 13);
-            this.btnPasaTodo.Name = "btnPasaTodo";
-            this.btnPasaTodo.Size = new System.Drawing.Size(70, 30);
-            this.btnPasaTodo.TabIndex = 113;
-            this.btnPasaTodo.Text = "Agg. Todo";
-            this.btnPasaTodo.UseVisualStyleBackColor = true;
-            this.btnPasaTodo.Click += new System.EventHandler(this.btnPasaTodo_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.lblEmpresa);
@@ -374,7 +345,6 @@
             this.panel4.Controls.Add(this.cbxUP);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.btnPasaTodo);
             this.panel4.Controls.Add(this.btnPasa);
             this.panel4.Controls.Add(this.btnSaca);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -410,6 +380,74 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(590, 37);
             this.panel5.TabIndex = 118;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // id_numerador
+            // 
+            this.id_numerador.DataPropertyName = "id_Numerador";
+            this.id_numerador.HeaderText = "ID NUM";
+            this.id_numerador.Name = "id_numerador";
+            this.id_numerador.ReadOnly = true;
+            this.id_numerador.Visible = false;
+            // 
+            // idNew
+            // 
+            this.idNew.DataPropertyName = "idNew";
+            this.idNew.HeaderText = "idNew";
+            this.idNew.Name = "idNew";
+            this.idNew.ReadOnly = true;
+            this.idNew.Visible = false;
+            // 
+            // intIdUndProduccion
+            // 
+            this.intIdUndProduccion.DataPropertyName = "intIdUndProduccion";
+            this.intIdUndProduccion.HeaderText = "intIdUndProductiva";
+            this.intIdUndProduccion.Name = "intIdUndProduccion";
+            this.intIdUndProduccion.ReadOnly = true;
+            this.intIdUndProduccion.Visible = false;
+            // 
+            // serie
+            // 
+            this.serie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.serie.DataPropertyName = "serie";
+            this.serie.HeaderText = "Serie";
+            this.serie.Name = "serie";
+            this.serie.ReadOnly = true;
+            this.serie.Width = 56;
+            // 
+            // numero
+            // 
+            this.numero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.numero.DataPropertyName = "numero";
+            this.numero.HeaderText = "Numero";
+            this.numero.Name = "numero";
+            this.numero.ReadOnly = true;
+            this.numero.Width = 69;
+            // 
+            // observacion
+            // 
+            this.observacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.observacion.DataPropertyName = "observacion";
+            this.observacion.HeaderText = "Descripcion";
+            this.observacion.Name = "observacion";
+            this.observacion.ReadOnly = true;
+            this.observacion.Width = 88;
+            // 
+            // strNoUndProduccion
+            // 
+            this.strNoUndProduccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.strNoUndProduccion.DataPropertyName = "strNoUndProduccion";
+            this.strNoUndProduccion.HeaderText = "Unidad Produccion";
+            this.strNoUndProduccion.Name = "strNoUndProduccion";
+            this.strNoUndProduccion.ReadOnly = true;
+            this.strNoUndProduccion.Width = 113;
             // 
             // SeriesPorOrden
             // 
@@ -456,21 +494,25 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEmpresa;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnPasaTodo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn serie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn observacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_Numerador;
+        private System.Windows.Forms.ComboBox cbxUP;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_serie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_num;
         private System.Windows.Forms.DataGridViewTextBoxColumn serie_Numerador;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero_Numerador;
         private System.Windows.Forms.DataGridViewTextBoxColumn observacion_Numerador;
-        private System.Windows.Forms.ComboBox cbxUP;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_numerador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idNew;
+        private System.Windows.Forms.DataGridViewTextBoxColumn intIdUndProduccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn observacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn strNoUndProduccion;
     }
 }

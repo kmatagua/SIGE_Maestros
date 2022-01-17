@@ -1056,7 +1056,7 @@
             this.tssVersion.Image = ((System.Drawing.Image)(resources.GetObject("tssVersion.Image")));
             this.tssVersion.Name = "tssVersion";
             this.tssVersion.Size = new System.Drawing.Size(200, 17);
-            this.tssVersion.Text = "Vs. 20220103.1053";
+            this.tssVersion.Text = "Vs. 20220117.1053";
             // 
             // tssBaseDatos
             // 

@@ -32,6 +32,8 @@ namespace Presentacion
         {
             InitializeComponent();
             tabla.Columns.Add("id");
+            tabla.Columns.Add("idNew");
+            tabla.Columns.Add("id_numerador");
             tabla.Columns.Add("serie");
             tabla.Columns.Add("numero");
             tabla.Columns.Add("observacion");
@@ -39,10 +41,10 @@ namespace Presentacion
             tabla.Columns.Add("strNoUndProduccion");
 
             DataColumn[] colPk1 = new DataColumn[1];
-            colPk1[0] = tabla.Columns["id"];
+            colPk1[0] = tabla.Columns["idNew"];
             tabla.PrimaryKey = colPk1;
-  
 
+            tabla_Numerador.Columns.Add("id");
             tabla_Numerador.Columns.Add("id_Numerador");
             tabla_Numerador.Columns.Add("serie_Numerador");
             tabla_Numerador.Columns.Add("numero_Numerador");
@@ -113,7 +115,9 @@ namespace Presentacion
                     //creas una nueva row
                     DataRow row = tabla.NewRow();
                     //asignas el dato a cada columna de la row
-                    row["id"] = row1["intIdNum"].ToString();
+                    row["id"] = row1["intIdSeriesPorOrden"].ToString();
+                    row["idNew"] = row1["intIdNum"].ToString() + "" + row1["intIdUndProduccion"].ToString();
+                    row["id_numerador"] = row1["intIdNum"].ToString();
                     row["serie"] = row1["strSerie"].ToString();
                     row["numero"] = row1["strNumero"].ToString();
                     row["observacion"] = row1["strObservacion"].ToString();
@@ -145,7 +149,7 @@ namespace Presentacion
 
         private void btnPasa_Click(object sender, EventArgs e)
         {
-            int intIdNumerador = Convert.ToInt32(dgvListaNumerador.CurrentRow.Cells["id_Numerador"].Value);
+            int intIdNumerador = Convert.ToInt32(dgvListaNumerador.CurrentRow.Cells["id_num"].Value);
             string strSerieNumerador = dgvListaNumerador.CurrentRow.Cells["serie_Numerador"].Value.ToString();
             string strNroNumerador = dgvListaNumerador.CurrentRow.Cells["numero_Numerador"].Value.ToString();
             string strObservacionNumerador = dgvListaNumerador.CurrentRow.Cells["observacion_Numerador"].Value.ToString();
@@ -164,7 +168,7 @@ namespace Presentacion
             }
             foreach (DataRow row2 in tabla.Rows)
             {
-                if (intIdNumerador == Convert.ToInt32(row2[0].ToString()) /*&& idUndProduccion == Convert.ToInt32(row2[4].ToString())*/)
+                if (intIdNumerador == Convert.ToInt32(row2["id_numerador"].ToString()) && idUndProduccion == Convert.ToInt32(row2["intIdUndProduccion"].ToString()))
                 {
                     MessageBox.Show("El numerador ya fue Asignado", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -172,7 +176,7 @@ namespace Presentacion
             }
 
 
-            tabla.Rows.Add(new object[] { intIdNumerador, strSerieNumerador, strNroNumerador, strObservacionNumerador, idUndProduccion, strUnidadProduccion });
+            tabla.Rows.Add(new object[] { 0, intIdNumerador+""+idUndProduccion,intIdNumerador, strSerieNumerador, strNroNumerador, strObservacionNumerador, idUndProduccion, strUnidadProduccion });
 
             //int index = dgvListaEmp.CurrentRow.Index;
             //dgvListaEmp.Rows.RemoveAt(index);
@@ -287,12 +291,13 @@ namespace Presentacion
             {
                 foreach (DataGridViewRow row in dgvListaNumerador.Rows)
                 {
+                    int id = Convert.ToInt32(row.Cells["id"].Value);
                     int intIdNumerador = Convert.ToInt32(row.Cells["id_Numerador"].Value);
                     string strSerieNumerador = row.Cells["serie_Numerador"].Value.ToString();
                     string strNroNumerador = row.Cells["numero_Numerador"].Value.ToString();
                     string strObservacionNumerador = row.Cells["observacion_Numerador"].Value.ToString();
                   
-                    tabla.Rows.Add(new object[] { intIdNumerador, strSerieNumerador, strNroNumerador, strObservacionNumerador });
+                    tabla.Rows.Add(new object[] { id, intIdNumerador, strSerieNumerador, strNroNumerador, strObservacionNumerador });
                 }
                 return;
             }
@@ -301,6 +306,7 @@ namespace Presentacion
             {
                 foreach (DataGridViewRow row in dgvListaNumerador.Rows)
                 {
+                    int id = Convert.ToInt32(row.Cells["id"].Value);
                     int intIdNumerador = Convert.ToInt32(row.Cells["id_Numerador"].Value);
                     string strSerieNumerador = row.Cells["serie_Numerador"].Value.ToString();
                     string strNroNumerador = row.Cells["numero_Numerador"].Value.ToString();
@@ -316,7 +322,7 @@ namespace Presentacion
                     }
                     else
                     {
-                        tabla.Rows.Add(new object[] { intIdNumerador, strSerieNumerador, strNroNumerador, strObservacionNumerador });
+                        tabla.Rows.Add(new object[] { id, intIdNumerador, strSerieNumerador, strNroNumerador, strObservacionNumerador });
                     }
 
                 }
