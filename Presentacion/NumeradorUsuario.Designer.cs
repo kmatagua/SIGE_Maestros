@@ -68,19 +68,19 @@
             this.btnPasaTodo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbxOperacion = new System.Windows.Forms.ComboBox();
+            this.cbxTA = new System.Windows.Forms.ComboBox();
+            this.cbxCO = new System.Windows.Forms.ComboBox();
+            this.cbxSede = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbxSede = new System.Windows.Forms.ComboBox();
-            this.cbxCO = new System.Windows.Forms.ComboBox();
-            this.cbxTA = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaNumerador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaNumeradorAcc)).BeginInit();
             this.panel1.SuspendLayout();
@@ -480,6 +480,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtro";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(564, 21);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(85, 13);
+            this.label9.TabIndex = 108;
+            this.label9.Text = "Tipo Adquisicion";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(368, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(101, 13);
+            this.label8.TabIndex = 108;
+            this.label8.Text = "Centro Operaciones";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(172, 21);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.TabIndex = 108;
+            this.label7.Text = "Sede";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -498,6 +525,39 @@
             this.cbxOperacion.Size = new System.Drawing.Size(151, 21);
             this.cbxOperacion.TabIndex = 107;
             this.cbxOperacion.SelectedIndexChanged += new System.EventHandler(this.cbxOperacion_SelectedIndexChanged);
+            // 
+            // cbxTA
+            // 
+            this.cbxTA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTA.FormattingEnabled = true;
+            this.cbxTA.Location = new System.Drawing.Point(567, 37);
+            this.cbxTA.Name = "cbxTA";
+            this.cbxTA.Size = new System.Drawing.Size(190, 21);
+            this.cbxTA.TabIndex = 109;
+            this.cbxTA.SelectedIndexChanged += new System.EventHandler(this.cbxTA_SelectedIndexChanged);
+            this.cbxTA.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cbxTA_Format);
+            // 
+            // cbxCO
+            // 
+            this.cbxCO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCO.FormattingEnabled = true;
+            this.cbxCO.Location = new System.Drawing.Point(371, 37);
+            this.cbxCO.Name = "cbxCO";
+            this.cbxCO.Size = new System.Drawing.Size(190, 21);
+            this.cbxCO.TabIndex = 109;
+            this.cbxCO.SelectedIndexChanged += new System.EventHandler(this.cbxCO_SelectedIndexChanged);
+            this.cbxCO.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cbxCO_Format);
+            // 
+            // cbxSede
+            // 
+            this.cbxSede.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSede.FormattingEnabled = true;
+            this.cbxSede.Location = new System.Drawing.Point(175, 37);
+            this.cbxSede.Name = "cbxSede";
+            this.cbxSede.Size = new System.Drawing.Size(190, 21);
+            this.cbxSede.TabIndex = 109;
+            this.cbxSede.SelectedIndexChanged += new System.EventHandler(this.cbxSede_SelectedIndexChanged);
+            this.cbxSede.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cbxSede_Format);
             // 
             // panel2
             // 
@@ -546,66 +606,6 @@
             this.label6.Size = new System.Drawing.Size(284, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "En Caja Chica: Apr. OC = Apr. Sup. y Gen. OC = Apr. Cont.";
-            // 
-            // cbxSede
-            // 
-            this.cbxSede.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxSede.FormattingEnabled = true;
-            this.cbxSede.Location = new System.Drawing.Point(175, 37);
-            this.cbxSede.Name = "cbxSede";
-            this.cbxSede.Size = new System.Drawing.Size(190, 21);
-            this.cbxSede.TabIndex = 109;
-            this.cbxSede.SelectedIndexChanged += new System.EventHandler(this.cbxSede_SelectedIndexChanged);
-            this.cbxSede.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cbxSede_Format);
-            // 
-            // cbxCO
-            // 
-            this.cbxCO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCO.FormattingEnabled = true;
-            this.cbxCO.Location = new System.Drawing.Point(371, 37);
-            this.cbxCO.Name = "cbxCO";
-            this.cbxCO.Size = new System.Drawing.Size(190, 21);
-            this.cbxCO.TabIndex = 109;
-            this.cbxCO.SelectedIndexChanged += new System.EventHandler(this.cbxCO_SelectedIndexChanged);
-            this.cbxCO.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cbxCO_Format);
-            // 
-            // cbxTA
-            // 
-            this.cbxTA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxTA.FormattingEnabled = true;
-            this.cbxTA.Location = new System.Drawing.Point(567, 37);
-            this.cbxTA.Name = "cbxTA";
-            this.cbxTA.Size = new System.Drawing.Size(190, 21);
-            this.cbxTA.TabIndex = 109;
-            this.cbxTA.SelectedIndexChanged += new System.EventHandler(this.cbxTA_SelectedIndexChanged);
-            this.cbxTA.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cbxTA_Format);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(172, 21);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
-            this.label7.TabIndex = 108;
-            this.label7.Text = "Sede";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(368, 21);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 13);
-            this.label8.TabIndex = 108;
-            this.label8.Text = "Centro Operaciones";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(564, 21);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 13);
-            this.label9.TabIndex = 108;
-            this.label9.Text = "Tipo Adquisicion";
             // 
             // NumeradorUsuario
             // 

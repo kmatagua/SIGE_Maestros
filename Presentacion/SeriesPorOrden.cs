@@ -20,6 +20,13 @@ namespace Presentacion
         public int tipo;
         public int intIdSeriesPorOrden;
 
+        public string valor;
+        public string index;
+        public string valor2;
+        public string index2;
+        public string valor3;
+        public string index3;
+
         DataTable tabla = new DataTable();
         DataTable tabla_Numerador = new DataTable();
 
@@ -49,8 +56,60 @@ namespace Presentacion
             tabla_Numerador.Columns.Add("serie_Numerador");
             tabla_Numerador.Columns.Add("numero_Numerador");
             tabla_Numerador.Columns.Add("observacion_Numerador");
-            
+            tabla_Numerador.Columns.Add("almacen_Numerador");
+            tabla_Numerador.Columns.Add("tipoOpe_Numerador");
+            tabla_Numerador.Columns.Add("intIdOperacion");
+            tabla_Numerador.Columns.Add("strNoOperacion");
+
             tabla_Numerador.Columns.Add("item");
+
+            var Valores = new List<Valor>();
+            Valores.Add(new Valor() { Index = "", Value = "-- SELECCIONE --" });
+            Valores.Add(new Valor() { Index = "01", Value = "SANTA ANITA" });
+            Valores.Add(new Valor() { Index = "02", Value = "CALLAO" });
+            Valores.Add(new Valor() { Index = "03", Value = "PISCO 1" });
+            Valores.Add(new Valor() { Index = "04", Value = "PISCO 2" });
+            Valores.Add(new Valor() { Index = "05", Value = "PARACHIQUE" });
+            Valores.Add(new Valor() { Index = "06", Value = "SULLANA" });
+            Valores.Add(new Valor() { Index = "07", Value = "TERCEROS LIMA" });
+            Valores.Add(new Valor() { Index = "08", Value = "TERCEROS PIURA" });
+            Valores.Add(new Valor() { Index = "09", Value = "EXTERNOS" });
+            Valores.Add(new Valor() { Index = "10", Value = "HUACHO" });
+            Valores.Add(new Valor() { Index = "11", Value = "PUENTE PIEDRA" });
+            Valores.Add(new Valor() { Index = "12", Value = "CHIMBOTE" });
+            cbxSede.DataSource = Valores;
+
+            var Valores2 = new List<Valor>();
+            Valores2.Add(new Valor() { Index = "", Value = "-- SELECCIONE --" });
+            Valores2.Add(new Valor() { Index = "00", Value = "ADMINISTRACION" });
+            Valores2.Add(new Valor() { Index = "01", Value = "CENTRO DIST. Y VENTAS" });
+            Valores2.Add(new Valor() { Index = "02", Value = "PLANTA HARINA" });
+            Valores2.Add(new Valor() { Index = "03", Value = "PLANTA CONSERVAS" });
+            Valores2.Add(new Valor() { Index = "04", Value = "PLANTA VELAS" });
+            Valores2.Add(new Valor() { Index = "05", Value = "CENTRO DE CUSTODIO PT" });
+            Valores2.Add(new Valor() { Index = "06", Value = "CENTRO DE CUSTODIO MIR" });
+            Valores2.Add(new Valor() { Index = "07", Value = "FLOTA" });
+            cbxCO.DataSource = Valores2;
+
+            var Valores3 = new List<Valor>();
+            Valores3.Add(new Valor() { Index = "", Value = "-- SELECCIONE --" });
+            Valores3.Add(new Valor() { Index = "01", Value = "COMPRAS" });
+            Valores3.Add(new Valor() { Index = "02", Value = "SERVICIOS" });
+            Valores3.Add(new Valor() { Index = "03", Value = "MP COMPRAS" });
+            Valores3.Add(new Valor() { Index = "04", Value = "MP SERVICIOS" });
+            Valores3.Add(new Valor() { Index = "05", Value = "CAJAS" });
+            Valores3.Add(new Valor() { Index = "06", Value = "RR HH" });
+            Valores3.Add(new Valor() { Index = "07", Value = "COMERCIAL - C" });
+            Valores3.Add(new Valor() { Index = "08", Value = "COMERCIAL - S" });
+            Valores3.Add(new Valor() { Index = "09", Value = "ALMACEN(ROOLD) - C" });
+            Valores3.Add(new Valor() { Index = "10", Value = "ALMACEN(ROOLD) - S" });
+            Valores3.Add(new Valor() { Index = "11", Value = "DORIS - EMILIO - C" });
+            Valores3.Add(new Valor() { Index = "12", Value = "DORIS - EMILIO - S" });
+            Valores3.Add(new Valor() { Index = "13", Value = "LORENZO TRILLO -C" });
+            Valores3.Add(new Valor() { Index = "14", Value = "LORENZO TRILLO -S" });
+            Valores3.Add(new Valor() { Index = "15", Value = "NORMA - C" });
+            Valores3.Add(new Valor() { Index = "16", Value = "NORMA - S" });
+            cbxTA.DataSource = Valores3;
         }
 
         private void SeriesPorOrden_Load(object sender, EventArgs e)
@@ -91,7 +150,10 @@ namespace Presentacion
                 row["serie_Numerador"] = row1["strSerie"].ToString();
                 row["numero_Numerador"] = row1["strNumero"].ToString();
                 row["observacion_Numerador"] = row1["strObservacion"].ToString();
-                
+                row["almacen_Numerador"] = row1["strNoAlm"].ToString();
+                row["tipoOpe_Numerador"] = row1["strNoTipoOpe"].ToString();
+                row["intIdOperacion"] = row1["intIdOperacion"].ToString();
+                row["strNoOperacion"] = row1["strNoOperacion"].ToString();
                 row["item"] = 1;
                 tabla_Numerador.Rows.Add(row);
             }
@@ -336,35 +398,36 @@ namespace Presentacion
 
         }
 
-        public void ListarComboOperacion()
-        {
-            //bool blnTodoOK = false;
-            //Clases.InicialCls.LeerXml();
-            //DataTable tbl = new DataTable();
-            //NGOperacion obj = new NGOperacion(Configuracion.Sistema.CadenaConexion);
-            //tbl = obj.OperacionCombo(ref blnTodoOK);
-            //cbxOperacion.DisplayMember = "strNoOperacion";
-            //cbxOperacion.ValueMember = "intIdOperacion";
-            //cbxOperacion.DataSource = tbl;
-        }
-
         public void filtrar()
         {
-            //string operacion = cbxOperacion.SelectedValue.ToString();
-            //string filtro = " item = " + "'" + 1 + "'";
+            string operacion;
+            string serie = index +""+ index2 +""+index3;
+            if(cbxOperacion.SelectedValue is null) {
+                operacion = "";
+            } else
+            {
+                operacion = cbxOperacion.SelectedValue.ToString();
+            }
 
-            //if (operacion == "-1")
-            //{
-            //    operacion = "";
-            //}
+            
+            string filtro = " item = " + "'" + 1 + "'";
 
-            //if (operacion != "")
-            //{
-            //    filtro = filtro + " and " + " intIdOperacion = " + "'" + operacion + "'";
-            //}
+            if (operacion == "-1")
+            {
+                operacion = "";
+            }
 
+            if (operacion != "")
+            {
+                filtro = filtro + " and " + " intIdOperacion = " + "'" + operacion + "'";
+            }
 
-            //src.Filter = filtro;
+            if (serie != "")
+            {
+                filtro = filtro + " and " + " serie_Numerador like " + "'%" + serie + "%'";
+            }
+
+            src.Filter = filtro;
         }
 
         private void cbxOperacion_SelectedIndexChanged(object sender, EventArgs e)
@@ -438,6 +501,57 @@ namespace Presentacion
 
         }
 
+        public void ListarComboOperacion()
+        {
+            bool blnTodoOK = false;
+            Clases.InicialCls.LeerXml();
+            DataTable tbl = new DataTable();
+            NGOperacion obj = new NGOperacion(Configuracion.Sistema.CadenaConexion);
+            tbl = obj.OperacionCombo(ref blnTodoOK);
+            cbxOperacion.DisplayMember = "strNoOperacion";
+            cbxOperacion.ValueMember = "intIdOperacion";
+            cbxOperacion.DataSource = tbl;
+            cbxOperacion.SelectedValue = 5;
+        }
 
+        public class Valor
+        {
+            public string Value { get; set; }
+            public string Index { get; set; }
+        }
+
+        private void cbxSede_Format(object sender, ListControlConvertEventArgs e)
+        {
+            valor = ((Valor)e.ListItem).Value;
+            index = ((Valor)e.ListItem).Index;
+            e.Value = index + " - " + valor;
+        }
+        private void cbxCO_Format(object sender, ListControlConvertEventArgs e)
+        {
+            valor2 = ((Valor)e.ListItem).Value;
+            index2 = ((Valor)e.ListItem).Index;
+            e.Value = index2 + " - " + valor2;
+        }
+        private void cbxTA_Format(object sender, ListControlConvertEventArgs e)
+        {
+            valor3 = ((Valor)e.ListItem).Value;
+            index3 = ((Valor)e.ListItem).Index;
+            e.Value = index3 + " - " + valor3;
+        }
+
+        private void cbxSede_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            filtrar();
+        }
+
+        private void cbxCO_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            filtrar();
+        }
+
+        private void cbxTA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            filtrar();
+        }
     }
 }
