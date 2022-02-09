@@ -84,6 +84,29 @@ namespace Datos
             return tbl;
         }
 
+        public DataTable ListaUniGesAccUsuAprReq(int idUsuario, int idEmpresa, ref bool pBlnTodoOk)
+        {
+            SqlConnection cn = new SqlConnection(_pStrConString);
+            pBlnTodoOk = false;
+            DataTable tbl = new DataTable();
+            try
+            {
+                cn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("SP_UNIGES_USU_APR_REQ_Q01", cn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@intIdUsu", idUsuario);
+                da.SelectCommand.Parameters.AddWithValue("@intIdEmp", idEmpresa);
+                da.Fill(tbl);
+                pBlnTodoOk = true;
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                pBlnTodoOk = false;
+            }
+            return tbl;
+        }
+
         public DataTable ListaUndGestionTodo(ref bool pBlnTodoOk)
         {
             SqlConnection cn = new SqlConnection(_pStrConString);

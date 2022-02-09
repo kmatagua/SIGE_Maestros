@@ -48,6 +48,14 @@ namespace Negocio
             return tbl;
         }
 
+        public DataTable UniGesAccesoUsuAprReq(int idUsuario, int idEmpresa, ref bool blnTodoOK)
+        {
+            DataTable tbl = new DataTable();
+            Datos.DAUndGestion obj = new Datos.DAUndGestion(_strConString);
+            tbl = obj.ListaUniGesAccUsuAprReq(idUsuario, idEmpresa, ref blnTodoOK);
+            return tbl;
+        }
+
         //public DataTable UniNegAcceso(int intIdEmp, ref bool blnTodoOK)
         //{
         //    DataTable tbl = new DataTable();

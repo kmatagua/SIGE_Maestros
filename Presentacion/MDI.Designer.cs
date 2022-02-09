@@ -130,6 +130,7 @@
             this.tssBaseDatos = new System.Windows.Forms.ToolStripStatusLabel();
             this.crearFamiliaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarSubFamiliasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignarAUsuarioApruebaReqToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.ssBar.SuspendLayout();
             this.SuspendLayout();
@@ -880,7 +881,8 @@
             this.unidadDeGestionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.creacionUnidadGestionToolStripMenuItem,
             this.asignarAUsuarioToolStripMenuItem3,
-            this.asignarAEmpresaToolStripMenuItem4});
+            this.asignarAEmpresaToolStripMenuItem4,
+            this.asignarAUsuarioApruebaReqToolStripMenuItem});
             this.unidadDeGestionToolStripMenuItem.Name = "unidadDeGestionToolStripMenuItem";
             this.unidadDeGestionToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.unidadDeGestionToolStripMenuItem.Tag = "1155";
@@ -1082,6 +1084,14 @@
             this.cargarSubFamiliasToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.cargarSubFamiliasToolStripMenuItem.Text = "Cargar Sub Familias";
             // 
+            // asignarAUsuarioApruebaReqToolStripMenuItem
+            // 
+            this.asignarAUsuarioApruebaReqToolStripMenuItem.Name = "asignarAUsuarioApruebaReqToolStripMenuItem";
+            this.asignarAUsuarioApruebaReqToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.asignarAUsuarioApruebaReqToolStripMenuItem.Tag = "115520";
+            this.asignarAUsuarioApruebaReqToolStripMenuItem.Text = "Asignar a Usuario Aprueba Req";
+            this.asignarAUsuarioApruebaReqToolStripMenuItem.Click += new System.EventHandler(this.asignarAUsuarioApruebaReqToolStripMenuItem_Click);
+            // 
             // MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1211,5 +1221,6 @@
         private System.Windows.Forms.ToolStripMenuItem asignarCentroDeCostoAUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuarioApruebaReqPorNumeadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seriesPorOrdenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asignarAUsuarioApruebaReqToolStripMenuItem;
     }
 }

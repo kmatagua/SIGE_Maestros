@@ -342,6 +342,12 @@
     <Compile Include="UniGesEmpresa.Designer.cs">
       <DependentUpon>UniGesEmpresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="UniGesUsuarioAprReq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UniGesUsuarioAprReq.Designer.cs">
+      <DependentUpon>UniGesUsuarioAprReq.cs</DependentUpon>
+    </Compile>
     <Compile Include="UniGesUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -998,6 +1004,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UniGesEmpresa.resx">
       <DependentUpon>UniGesEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UniGesUsuarioAprReq.resx">
+      <DependentUpon>UniGesUsuarioAprReq.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UniGesUsuario.resx">
       <DependentUpon>UniGesUsuario.cs</DependentUpon>

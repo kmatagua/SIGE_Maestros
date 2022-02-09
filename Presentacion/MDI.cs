@@ -1540,5 +1540,18 @@ namespace Presentacion
 
             frm.Show();
         }
+
+        private void asignarAUsuarioApruebaReqToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<UniGesUsuario>().Count() == 1)
+                Application.OpenForms.OfType<UniGesUsuario>().First().Close();
+
+            UniGesUsuarioAprReq frm = new UniGesUsuarioAprReq();
+            frm.MdiParent = this;
+            frm.idEmpresa = intIdEmpresa;
+            frm.idUsuario = idUsuario;
+            frm.nombreEmpresa = strNoEmpresa;
+            frm.Show();
+        }
     }
 }

@@ -193,6 +193,13 @@ namespace Negocio
 
         }
 
+        public void InsertarUniGesUsuarioAprReq(int idUsuario, DataTable tabla, ref bool blnTodoOK)
+        {
+            Datos.DAUsuario obj = new Datos.DAUsuario(_strConString);
+            obj.InsertarUniGesUsuarioAprReq(idUsuario, tabla, ref blnTodoOK);
+
+        }
+
         public void InsertarMotivoUsuario(int idUsuario, DataTable tabla, ref bool blnTodoOK)
         {
             Datos.DAUsuario obj = new Datos.DAUsuario(_strConString);
@@ -225,6 +232,13 @@ namespace Negocio
         {
             Datos.DAUsuario obj = new Datos.DAUsuario(_strConString);
             obj.BorrarUniGes(idSeleccion, ref blnTodoOK);
+
+        }
+
+        public void BorrarUniGesAprReq(int idSeleccion, ref bool blnTodoOK)
+        {
+            Datos.DAUsuario obj = new Datos.DAUsuario(_strConString);
+            obj.BorrarUniGesAprReq(idSeleccion, ref blnTodoOK);
 
         }
     }
