@@ -394,6 +394,12 @@
     <Compile Include="Reportes\DS_Ped01.designer.cs">
       <DependentUpon>DS_Ped01.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioCanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioCanal.Designer.cs">
+      <DependentUpon>UsuarioCanal.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuAprReq.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1030,6 +1036,9 @@
     <EmbeddedResource Include="Reportes\CR_LISTAPRECIO.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CR_LISTAPRECIO.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioCanal.resx">
+      <DependentUpon>UsuarioCanal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuAprReq.resx">
       <DependentUpon>UsuAprReq.cs</DependentUpon>

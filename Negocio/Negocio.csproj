@@ -57,6 +57,7 @@
     <Compile Include="NGMoneda.cs" />
     <Compile Include="NGTipoCambio.cs" />
     <Compile Include="NGNumerador.cs" />
+    <Compile Include="NGCanalDist.cs" />
     <Compile Include="NGUndNegocio.cs" />
     <Compile Include="NGTipoDoc.cs" />
     <Compile Include="NGClaEmp.cs" />

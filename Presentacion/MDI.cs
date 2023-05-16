@@ -1553,5 +1553,15 @@ namespace Presentacion
             frm.nombreEmpresa = strNoEmpresa;
             frm.Show();
         }
+
+        private void usuarioCanalDistToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UsuarioCanal frm = new UsuarioCanal();
+            frm.MdiParent = this;
+            frm.idUsuario = idUsuario;
+            frm.idEmpresa = intIdEmpresa;
+            frm.nombreEmpresa = strNoEmpresa;
+            frm.Show();
+        }
     }
 }

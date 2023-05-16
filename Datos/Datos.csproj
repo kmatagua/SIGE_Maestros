@@ -57,6 +57,7 @@
     <Compile Include="DAMoneda.cs" />
     <Compile Include="DATipoCambio.cs" />
     <Compile Include="DANumerador.cs" />
+    <Compile Include="DACanalDist.cs" />
     <Compile Include="DAUndNegocio.cs" />
     <Compile Include="DATipoDoc.cs" />
     <Compile Include="DAClaEmp.cs" />

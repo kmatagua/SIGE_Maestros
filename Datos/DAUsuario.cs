@@ -438,6 +438,46 @@ namespace Datos
             }
         }
 
+        public void InsertarCanalDistUsuario(int idUsuario, DataTable tabla, ref bool pBlnTodoOk)
+        {
+            SqlConnection cn = new SqlConnection(_pStrConString);
+            pBlnTodoOk = false;
+
+            try
+            {
+                cn.Open();
+                //SqlDataAdapter daD = new SqlDataAdapter("SP_UNINEG_USU_D01", cn);
+                //daD.SelectCommand.CommandType = CommandType.StoredProcedure;
+                //daD.SelectCommand.Parameters.AddWithValue("@intIdUsu", idUsuario);
+                //daD.SelectCommand.ExecuteNonQuery();
+                if (tabla.Rows.Count > 0)
+                {
+                    SqlDataAdapter da1 = new SqlDataAdapter("SP_CANALDIST_USU_I01", cn);
+                    da1.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                    foreach (DataRow row in tabla.Rows)
+                    {
+                        //if (Convert.ToInt32(row["id"]) == 0)
+                        //{
+                        da1.SelectCommand.Parameters.Clear();
+                        //    id
+
+                        da1.SelectCommand.Parameters.AddWithValue("@intIdCanalDist", Convert.ToInt32(row["idCanalDist"].ToString()));
+                        da1.SelectCommand.Parameters.AddWithValue("@intIdUsu", idUsuario);
+
+                        da1.SelectCommand.ExecuteNonQuery();
+                        //}
+                    }
+                }
+                pBlnTodoOk = true;
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                pBlnTodoOk = false;
+            }
+        }
+
         public void InsertarAlmacenUsuario(int idUsuario, DataTable tabla, int idEmpresa, ref bool pBlnTodoOk)
         {
             SqlConnection cn = new SqlConnection(_pStrConString);
@@ -575,6 +615,28 @@ namespace Datos
                 SqlDataAdapter da = new SqlDataAdapter("SP_UNINEG_USU_BORRAR_D01", cn);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
                 da.SelectCommand.Parameters.AddWithValue("@intIdUniNeg", idSeleccion);
+                //da.SelectCommand.Parameters.AddWithValue("@intIdUsuMf", idUsuario);
+                da.SelectCommand.ExecuteNonQuery();
+                pBlnTodoOk = true;
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                pBlnTodoOk = false;
+            }
+        }
+
+        public void BorrarCanalDist(int idSeleccion, ref bool pBlnTodoOk)
+        {
+            SqlConnection cn = new SqlConnection(_pStrConString);
+            pBlnTodoOk = false;
+
+            try
+            {
+                cn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("SP_CANALDIST_USU_BORRAR_D01", cn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@intIdUsuCanal", idSeleccion);
                 //da.SelectCommand.Parameters.AddWithValue("@intIdUsuMf", idUsuario);
                 da.SelectCommand.ExecuteNonQuery();
                 pBlnTodoOk = true;

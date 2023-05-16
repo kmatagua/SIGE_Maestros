@@ -130,6 +130,13 @@ namespace Negocio
 
         }
 
+        public void InsertarCanalDistUsuario(int idUsuario, DataTable tabla, ref bool blnTodoOK)
+        {
+            Datos.DAUsuario obj = new Datos.DAUsuario(_strConString);
+            obj.InsertarCanalDistUsuario(idUsuario, tabla, ref blnTodoOK);
+
+        }
+
         public void InsertarAlmacenUsuario(int idUsuario, DataTable tabla, int idEmpresa, ref bool blnTodoOK)
         {
             Datos.DAUsuario obj = new Datos.DAUsuario(_strConString);
@@ -155,6 +162,13 @@ namespace Negocio
         {
             Datos.DAUsuario obj = new Datos.DAUsuario(_strConString);
             obj.BorrarUniNeg(idSeleccion, ref blnTodoOK);
+
+        }
+
+        public void BorrarCanalDist(int idSeleccion, ref bool blnTodoOK)
+        {
+            Datos.DAUsuario obj = new Datos.DAUsuario(_strConString);
+            obj.BorrarCanalDist(idSeleccion, ref blnTodoOK);
 
         }
 
