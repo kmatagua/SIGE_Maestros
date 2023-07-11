@@ -20,5 +20,7 @@ namespace Entidad
 
         public int intServicio { get; set; }
 
+        public string prueba { get; set; }
+
     }
 }
